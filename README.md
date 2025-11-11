@@ -35,3 +35,10 @@ Changes to the defaults:
 ## Mac Terminal
 
 Install the attached `mac.terminal` file.
+
+# Development Machine Configuration
+
+* If your development machine is a remote machine, set up an SSH public key.
+* Disable password on sudo: `visudo` and append to the end: `<username> ALL=(ALL) NOPASSWD: ALL` (replace `<username>` with your username).
+* Install ZSH: `sudo apt install zsh` (if you're on Mac, you already have it).
+* If mounting any drives, set UID and GID to yourself (so you don't have to sudo to write) and set fmask to 117 and dmask to 007 (prevents `ls` from doing any crazy highlighting).
