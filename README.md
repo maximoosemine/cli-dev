@@ -42,3 +42,10 @@ Install the attached `mac.terminal` file.
 * Disable password on sudo: `visudo` and append to the end: `<username> ALL=(ALL) NOPASSWD: ALL` (replace `<username>` with your username).
 * Install ZSH: `sudo apt install zsh` (if you're on Mac, you already have it).
 * If mounting any drives, set UID and GID to yourself (so you don't have to sudo to write) and set fmask to 117 and dmask to 007 (prevents `ls` from doing any crazy highlighting).
+
+# Install Software
+
+Install node and npm yourself.
+
+Run `install.sh`.
+
