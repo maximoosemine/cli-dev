@@ -1,0 +1,29 @@
+# vi: ft=dosini
+[main]
+
+smart_completion = True
+
+multi_line = True
+
+destructive_warning = True
+
+timing = True
+
+syntax_style = everforest-dark
+
+key_bindings = vi
+
+prompt = '\D \u@\h:\d> '
+prompt_continuation = '->'
+
+less_chatty = True
+
+keyword_casing = lower
+
+enable_pager = True
+
+# This clears the LESS env variable in case it has any undesirable options that mess things up (-c)
+pager = env LESS=-SRXF less
+
+[client]
+local-infile = on

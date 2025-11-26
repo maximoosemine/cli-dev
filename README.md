@@ -45,7 +45,40 @@ Install the attached `mac.terminal` file.
 
 # Install Software
 
-Install node and npm yourself.
+* Install node 20 and npm yourself. Recommended to use nvm.
+* Install nvim using `updateNvim-*.sh`.
+* Run commands from `install.sh`.
+* Install mycli using the following instructions: https://github.com/dbcli/mycli/discussions/1401
 
-Run `install.sh`.
+# Set up .zshrc
 
+* Point at the .zshrc in this repo.
+* Copy the theme into `~/.oh-my-zsh/themes/` and configure it.
+* Configure PATH to include nvim. Example:
+
+    ```
+    export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+    ```
+
+* Source fzf keybinding script. Example:
+
+    ```
+    source /usr/share/doc/fzf/examples/key-bindings.zsh
+    ```
+
+# Set up .tmux.conf
+
+Include the `.tmux.conf` in this repo in your `~/.tmux.conf` using the `source-file` directive.
+
+# Set up nvim
+
+Source the `nvim/init.vim` file in your nvim config.
+Run `:PlugInstall` and update any paths in this config.
+
+# Set up .gitconfig
+
+Include the `.gitconfig` in this repo in your `~/.gitconfig`. Make sure to configure your name and e-mail.
+
+# Set up .myclirc
+
+Include the `.myclirc` in this repo in your `~/.myclirc`.

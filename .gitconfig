@@ -1,0 +1,11 @@
+[credential]
+	helper = store
+[diff]
+	tool = nvimdiff
+[merge]
+	tool = nvimdiff
+[difftool]
+	prompt = false
+	trustExitCode = true
+[core]
+	editor = nvim

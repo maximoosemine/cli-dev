@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
@@ -10,12 +8,9 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
-# Install mycli
-pip3 install mycli
-
 # Install vim plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 # Install language servers
-npm i intelephense -g
+npm i -g intelephense @vtsls/language-server @vue/language-server
