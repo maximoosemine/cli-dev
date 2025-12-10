@@ -13,4 +13,4 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 # Install language servers
-npm i -g intelephense @vtsls/language-server @vue/language-server
+npm i -g intelephense @vtsls/language-server @vue/language-server remark-language-server
