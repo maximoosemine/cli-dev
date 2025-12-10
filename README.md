@@ -53,7 +53,7 @@ Install the attached `mac.terminal` file.
 # Set up .zshrc
 
 * Point at the .zshrc in this repo.
-* Copy the theme into `~/.oh-my-zsh/themes/` and configure it.
+* Run `install-omz-theme.sh`.
 * Configure PATH to include nvim. Example:
 
     ```
@@ -81,4 +81,6 @@ Include the `.gitconfig` in this repo in your `~/.gitconfig`. Make sure to confi
 
 # Set up .myclirc
 
-Include the `.myclirc` in this repo in your `~/.myclirc`.
+Set up `~/.local-myclirc` to contain all local configuration (database aliases for example).
+
+Run `install-myclirc.sh`.

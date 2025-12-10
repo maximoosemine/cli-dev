@@ -1,4 +1,4 @@
-export editor=nvim
+export EDITOR=nvim
 alias vim='nvim'
 alias vi='nvim'
 
@@ -17,13 +17,14 @@ alias gmto="git mergetool"
 
 export COLORTERM=truecolor
 
-ZSH_THEME="lukerandall-2"
-
 # Keeps zsh from CDing without cd
 unsetopt AUTO_CD
 
 # Makes content top align in less
 export LESS="$LESS -c"
+
+# Fixes unreadable files (with recommended color scheme)
+export LS_COLORS="${LS_COLORS}tw=1;34:ow=1;34:"
 
 # Make it easier to get back into the same tmux session
 alias desktop='tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux'
