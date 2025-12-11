@@ -13,7 +13,7 @@ function my_git_prompt_info() {
 }
 
 PROMPT='%{$fg_bold[green]%}%n%{$reset_color%} %{$fg_bold[blue]%}%~%{$reset_color%} $(my_git_prompt_info)%{$reset_color%}%B»%b '
-RPROMPT='%{$fg_bold[red]%}$(TZ=America/Los_Angeles strftime %r) ($(TZ=UTC strftime %H))%{$reset_color%}'
+RPROMPT='$(vi_mode_prompt_info) %{$fg_bold[red]%}$(TZ=America/Los_Angeles strftime %r) ($(TZ=UTC strftime %H))%{$reset_color%}'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[yellow]%}("
 ZSH_THEME_GIT_PROMPT_SUFFIX=") %{$reset_color%}"
