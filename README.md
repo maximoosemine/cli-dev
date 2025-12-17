@@ -41,7 +41,6 @@ Install the attached `mac.terminal` file.
 * If your development machine is a remote machine, set up an SSH public key.
 * Disable password on sudo: `visudo` and append to the end: `<username> ALL=(ALL) NOPASSWD: ALL` (replace `<username>` with your username).
 * Install ZSH: `sudo apt install zsh` (if you're on Mac, you already have it).
-* If mounting any drives, set UID and GID to yourself (so you don't have to sudo to write) and set fmask to 117 and dmask to 007 (prevents `ls` from doing any crazy highlighting).
 
 # Install Software
 
@@ -49,6 +48,7 @@ Install the attached `mac.terminal` file.
 * Install nvim using `updateNvim-*.sh`.
 * Run commands from `install.sh`.
 * Install mycli using the following instructions: https://github.com/dbcli/mycli/discussions/1401
+* Install tmux if necessary (Mac will need it).
 
 # Set up .zshrc
 
@@ -68,7 +68,7 @@ Install the attached `mac.terminal` file.
 
 # Set up .tmux.conf
 
-Include the `.tmux.conf` in this repo in your `~/.tmux.conf` using the `source-file` directive.
+Include the `.tmux.conf` in this repo in your `~/.tmux.conf` (creating it if necessary) using the `source-file` directive.
 
 # Set up nvim
 
@@ -81,4 +81,4 @@ Include the `.gitconfig` in this repo in your `~/.gitconfig`. Make sure to confi
 
 # Set up .myclirc
 
-Include the `.myclirc` in this repo in your `~/.myclirc`.
+`~/.myclirc` does not allow for includes or duplicate configuration. Overwrite your file with the one in this repo.

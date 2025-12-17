@@ -17,8 +17,6 @@ alias gmto="git mergetool"
 
 export COLORTERM=truecolor
 
-ZSH_THEME="lukerandall-2"
-
 # Keeps zsh from CDing without cd
 unsetopt AUTO_CD
 
