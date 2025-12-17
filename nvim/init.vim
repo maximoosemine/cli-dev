@@ -144,6 +144,8 @@ vim.lsp.config('vue_ls', vue_ls_config)
 vim.lsp.config('ts_ls', ts_ls_config)
 vim.lsp.enable({'vtsls', 'vue_ls'}) -- If using `ts_ls` replace `vtsls` to `ts_ls`
 
+vim.lsp.enable('html')
+
 vim.lsp.enable('remark_ls') -- Doesn't really do anything
 
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
