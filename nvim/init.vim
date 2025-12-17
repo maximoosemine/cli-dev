@@ -37,9 +37,9 @@ nnoremap <space>d :tabclose<CR>
 nnoremap <space>c :tabnew<CR>
 
 nnoremap <Leader>n :NERDTreeToggle<CR>
-nnoremap <Leader>f :FZF<CR>
+nnoremap <Leader>f :FzfLua files<CR>
 
-nnoremap <leader>g :call fzf#run(fzf#wrap({'source': 'git ls-files -m'}))<CR>
+nnoremap <leader>g :FzfLua git_status<CR>
 nnoremap <leader>o :FzfLua lsp_document_symbols<CR>
 nnoremap <leader><S-f> :FzfLua live_grep<CR>
 
