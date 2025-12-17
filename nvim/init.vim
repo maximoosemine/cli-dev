@@ -74,6 +74,9 @@ require('fzf-lua').setup({
     fzf = {
       ["ctrl-q"] = "select-all+accept",
     }
+  },
+  files = {
+    find_opts = [[find . -type f \! -path '*/.git/*' \! -path '*/vendor/*' \! -path '*/node_modules/*' \! -path '*/dist/*' \! -path './test/coverage-cache/*']]
   }
 })
 EOF
