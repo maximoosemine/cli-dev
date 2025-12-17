@@ -5,7 +5,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
-# Set up fzf key bindings and fuzzy completion
+# Set up fzf key bindings and fuzzy completion (unless it already did it)
 source <(fzf --zsh)
 
 # Install vim plug
