@@ -36,6 +36,10 @@ nnoremap <space>i :-tabnext<CR>
 nnoremap <space>d :tabclose<CR>
 nnoremap <space>c :tabnew<CR>
 
+nnoremap <space>q :qa<CR>
+nnoremap <space>w :wqa<CR>
+nnoremap <space>e :cq<CR>
+
 nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>f :FzfLua files<CR>
 
