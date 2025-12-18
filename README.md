@@ -1,3 +1,25 @@
+# Keyboard Config
+
+I have a Keychron K15 Max.
+
+## Critical Config
+
+My keyboard has a `fn` key between each side of the space bar. I have that remapped to `ctrl + space` for tmux (Since `ctrl` and `cmd` are swapped for iTerm2, there's a keybind in the profile to map this macro back to `ctrl`).
+On Windows, I have the modifier keys remapped in this order from the space bar out: `ctrl`, `alt`, `win`.
+Caps lock should be remapped to `esc`.
+
+## Other Config
+
+In the upper right corner, the K15 comes with a delete key, then an insert key (one in to the left). The inner of the two should be remapped to delete, and the outer key should be remapped to end.
+
+The K15 comes with 5 macros. The first one `M1` has been swapped with `fn` between the space bar.
+- `M2`: Switch window (`cmd + tab` or `alt + tab`).
+- `M3`: Capture region. On my Windows host I have Greenshot installed and capture region is bound to printscreen. On Mac, it's bound to `cmd + shift + 3`.
+- `M4`: Record screen. On my Windows host, I have ScreenToGif installed and an AHK script that launches it when I press `win + ctrl + F3`. On Mac, it's bound to `cmd + shift + 4`.
+- `M5`: On my Windows host, I have this bound to `win`, because the key that would otherwise be bound to `win` is bound to `alt + space` to pull up the command palette. On mac, I have it bound to `option + space` to pull up Claude.
+
+The K15 has this handy scroll wheel. On Mac, I use it for volume and mute. I don't listen to music on my Windows host, so I have it mapped to control my monitor's brightness by setting up hotkeys through Twinkle Tray, and pressing the scroll wheel locks my computer.
+
 # Colors
 
 All colors are based off of the [Everforest](https://github.com/sainnhe/everforest) theme.
@@ -32,9 +54,13 @@ Changes to the defaults:
 
 *All bold ANSI variants are the same as their non-bold variants*
 
-## Mac Terminal
+## iTerm2
 
-Install the attached `mac.terminal` file.
+Install the included iTerm2 JSON profile.
+
+Configure iTerm2:
+- Remap ctrl keys to cmd, and cmd keys to ctrl.
+- Set Appearance -> General -> Theme to Minimal.
 
 # Development Machine Configuration
 
@@ -84,3 +110,13 @@ Include the `.gitconfig` in this repo in your `~/.gitconfig`. Make sure to confi
 Set up `~/.local-myclirc` to contain all local configuration (database aliases for example).
 
 Run `install-myclirc.sh`.
+
+# Other Handy Software
+
+## Windows
+
+- Command Palette. Like Spotlight on Mac.
+- Twinkle Tray. For controlling monitor brightness on a schedule or with hotkeys.
+- Auto Hot Key.
+- Greenshot.
+- ScreenToGif.
