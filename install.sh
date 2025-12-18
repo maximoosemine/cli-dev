@@ -14,3 +14,9 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 # Install language servers
 npm i -g intelephense @vtsls/language-server @vue/language-server remark-language-server
+
+curl https://sh.rustup.rs -sSf | sh
+rustup component add rust-analyzer
+
+# Install ripgrep (note that FzfLua will silently fall back to grep if this isn't installed and it will be slow)
+sudo apt install ripgrep

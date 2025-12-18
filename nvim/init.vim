@@ -77,6 +77,9 @@ require('fzf-lua').setup({
   },
   files = {
     find_opts = [[find . -type f \! -path '*/.git/*' \! -path '*/vendor/*' \! -path '*/node_modules/*' \! -path '*/dist/*' \! -path './test/coverage-cache/*']]
+  },
+  grep = {
+    rg_opts = "--column --line-number --no-heading --color=always --smart-case --max-columns=4096 --glob '!**/.git/' --glob '!**/vendor/' --glob '!**/node_modules/' --glob '!**/dist/' --glob '!test/coverage-cache/' --glob '!**/package-lock.json' --glob '!**/composer.lock' -e"
   }
 })
 EOF
@@ -146,6 +149,8 @@ vim.lsp.config('vtsls', vtsls_config)
 vim.lsp.config('vue_ls', vue_ls_config)
 vim.lsp.config('ts_ls', ts_ls_config)
 vim.lsp.enable({'vtsls', 'vue_ls'}) -- If using `ts_ls` replace `vtsls` to `ts_ls`
+
+vim.lsp.enable('rust_analyzer')
 
 vim.lsp.enable('html')
 
