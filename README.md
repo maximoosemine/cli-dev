@@ -67,6 +67,7 @@ Configure iTerm2:
 * If your development machine is a remote machine, set up an SSH public key.
 * Disable password on sudo: `visudo` and append to the end: `<username> ALL=(ALL) NOPASSWD: ALL` (replace `<username>` with your username).
 * Install ZSH: `sudo apt install zsh` (if you're on Mac, you already have it).
+* Set timezone so tmux shows the correct time: `sudo timedatectl set-timezone America/Los_Angeles`.
 
 # Install Software
 
