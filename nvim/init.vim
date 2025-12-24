@@ -190,7 +190,7 @@ require('gitsigns').setup {
 EOF
 
 noremap ]h :Gitsigns nav_hunk next<CR>
-noremap [h :Gitsings nav_hunk prev<CR>
+noremap [h :Gitsigns nav_hunk prev<CR>
 noremap <leader>b :Gitsigns blame<CR>
 noremap <leader>h :Gitsigns preview_hunk_inline<CR>
 noremap <leader>s :Gitsigns stage_hunk<CR>
