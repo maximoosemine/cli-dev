@@ -25,6 +25,11 @@ Plug 'tpope/vim-fugitive'
 " Icons. REQUIRES NERD FONT
 Plug 'ryanoasis/vim-devicons'
 
+" Debug
+" Debugging is configured on a per machine basis. See: https://codeberg.org/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation
+Plug 'mfussenegger/nvim-dap'
+Plug 'igorlfs/nvim-dap-view'
+
 call plug#end()
 
 " C-w is not ergonomic for window controls
@@ -165,6 +170,31 @@ vim.lsp.enable('remark_ls') -- Doesn't really do anything
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
 vim.keymap.set('n', 'gr', vim.lsp.buf.references, {})
 EOF
+
+" Debugging
+:nnoremap <leader>x :DapViewToggle<CR>
+:nnoremap <leader>2 :DapTerminate<CR>
+:nnoremap <leader>1 :DapToggleBreakpoint<CR>
+
+:nnoremap <Up> :DapContinue<CR>
+:nnoremap <Down> :DapStepOver<CR>
+:nnoremap <Left> :DapStepOut<CR>
+:nnoremap <Right> :DapStepInto<CR>
+
+lua <<EOF
+require('dap-view').setup({
+  winbar = {
+    sections = {'threads','scopes','repl','breakpoints','exceptions','watches'},
+    default_section = 'threads',
+  },
+  -- Ideally, I'd dock this to the left, but there's no way to configure the width. See https://github.com/igorlfs/nvim-dap-view/issues/116
+})
+EOF
+
+:nnoremap <leader>3 :DapViewOpen<CR>:DapViewShow threads<CR>
+:nnoremap <leader>4 :DapViewOpen<CR>:DapViewShow scopes<CR>
+:nnoremap <leader>5 :DapViewOpen<CR>:DapViewShow repl<CR>
+:nnoremap <leader>6 :DapViewOpen<CR>:DapViewShow breakpoints<CR>
 
 set signcolumn=yes:2
 
