@@ -35,6 +35,8 @@ nnoremap <space>o :+tabnext<CR>
 nnoremap <space>i :-tabnext<CR>
 nnoremap <space>d :tabclose<CR>
 nnoremap <space>c :tabnew<CR>
+nnoremap <space>a :tabonly<CR>
+nnoremap <space>x :q<CR>
 
 nnoremap <space>q :qa<CR>
 nnoremap <space>w :wqa<CR>
