@@ -173,7 +173,7 @@ EOF
 
 " Debugging
 :nnoremap <leader>x :DapViewToggle<CR>
-:nnoremap <leader>2 :DapTerminate<CR>
+:nnoremap <leader>2 :DapTerminate<CR>:DapViewClose<CR>
 :nnoremap <leader>1 :DapToggleBreakpoint<CR>
 
 :nnoremap <Up> :DapContinue<CR>
