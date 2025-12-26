@@ -30,6 +30,9 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'mfussenegger/nvim-dap'
 Plug 'igorlfs/nvim-dap-view'
 
+" Improved status line
+Plug 'vim-airline/vim-airline'
+
 call plug#end()
 
 " C-w is not ergonomic for window controls
@@ -180,6 +183,18 @@ EOF
 :nnoremap <Down> :DapStepOver<CR>
 :nnoremap <Left> :DapStepOut<CR>
 :nnoremap <Right> :DapStepInto<CR>
+
+" Airline
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+let g:airline_symbols.executable = ''
+let g:airline_symbols.branch = ''
+let g:airline_section_a = '%{g:airline_mode_map[mode()]}'
+" A bit rudimentary but it works.
+" TODO: Make Airline refresh on dap event.
+let g:airline_section_z = '%l,%c %{luaeval("require(\"dap\").status()")}'
 
 lua <<EOF
 require('dap-view').setup({
