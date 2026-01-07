@@ -1,0 +1,8 @@
+/* For use with pandoc when I want an HTML file I can print and annotate */
+body {
+	line-height: 2;
+}
+
+@page {
+	margin: 0.75in;
+}

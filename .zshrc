@@ -15,6 +15,8 @@ alias gbu="git branch --sort=-committerdate --format='$GIT_BRANCH_FORMAT' --colo
 alias gdto="git difftool"
 alias gmto="git mergetool"
 
+alias pandoc-annotate="pandoc --embed-resources -s --css ~/cli-dev/annotate.css"
+
 export COLORTERM=truecolor
 
 # Keeps zsh from CDing without cd
