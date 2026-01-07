@@ -9,7 +9,7 @@ alias fzfg="git ls-files -m | fzf"
 GIT_BRANCH_FORMAT='%(refname:short)%(if)%(upstream:short)%(then) %(color:red)(%(if:equals=)%(upstream:track,nobracket)%(then)= %(end)%(upstream:short))%(color:reset)%(end) %(color:green)(%(committerdate:relative))%(color:reset) %(color:blue)<%(authorname)>%(color:reset)'
 
 alias gb="git branch --sort=-committerdate --format='$GIT_BRANCH_FORMAT'"
-alias gba="git branch -a --sort=-commiterdate --format='$GIT_BRANCH_FORMAT'"
+alias gba="git branch -a --sort=-committerdate --format='$GIT_BRANCH_FORMAT'"
 alias gbu="git branch --sort=-committerdate --format='$GIT_BRANCH_FORMAT' --color=always | grep --color=never \"<$(git config user.name)>\" | less"
 
 alias gdto="git difftool"
