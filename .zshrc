@@ -1,3 +1,5 @@
+source "${0:a:h}/.bashrc"
+
 export EDITOR=nvim
 alias vim='nvim'
 alias vi='nvim'
@@ -16,6 +18,8 @@ alias gdto="git difftool"
 alias gmto="git mergetool"
 
 alias pandoc-annotate="pandoc --embed-resources -s --css ~/cli-dev/annotate.css"
+
+alias copilot="copilot --allow-tool 'shell(frg)' --deny-tool 'grep' --deny-tool 'shell(rg)'"
 
 export COLORTERM=truecolor
 

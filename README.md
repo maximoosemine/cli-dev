@@ -93,6 +93,17 @@ Configure iTerm2:
     source /usr/share/doc/fzf/examples/key-bindings.zsh
     ```
 
+# Set up .bashrc
+
+Copilot executes commands through bash, so some things need to be set up in `.bashrc`
+
+* Point at the `.bashrc` in this repo.
+* Set up directories to exclude when running `frg` (fast ripgrep).
+
+    ```
+    export FRG_EXCLUDE_DIRS="node_modules,.git"
+    ```
+
 # Set up .tmux.conf
 
 Include the `.tmux.conf` in this repo in your `~/.tmux.conf` (creating it if necessary) using the `source-file` directive.
@@ -111,6 +122,10 @@ Include the `.gitconfig` in this repo in your `~/.gitconfig`. Make sure to confi
 Set up `~/.local-myclirc` to contain all local configuration (database aliases for example).
 
 Run `install-myclirc.sh`.
+
+# Set up .copilot
+
+Copy `copilot-instructions.md` into `~/.copilot`.
 
 # Other Handy Software
 
