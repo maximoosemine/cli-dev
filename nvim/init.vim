@@ -33,6 +33,9 @@ Plug 'igorlfs/nvim-dap-view'
 " Improved status line
 Plug 'vim-airline/vim-airline'
 
+" AI tools
+Plug 'github/copilot.vim'
+
 call plug#end()
 
 " C-w is not ergonomic for window controls
@@ -61,6 +64,10 @@ nnoremap <leader>d :lua vim.diagnostic.open_float()<CR>
 
 " Find and cd to project root on startup
 autocmd VimEnter * silent! lcd %:p:h | silent! lcd `git rev-parse --show-toplevel 2>/dev/null`
+
+" Autoreload files (might be useful with Copilot)
+set autoread
+au FocusGained,BufEnter * :checktime
 
 " Disable mouse
 set mouse=
