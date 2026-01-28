@@ -19,7 +19,7 @@ alias gmto="git mergetool"
 
 alias pandoc-annotate="pandoc --embed-resources -s --css ~/cli-dev/annotate.css"
 
-alias copilot="copilot --allow-tool 'shell(frg)' --deny-tool 'grep' --deny-tool 'shell(rg)'"
+alias c="copilot --allow-tool 'shell(frg)' --deny-tool 'grep' --deny-tool 'shell(rg)' --allow-tool 'edit'"
 
 export COLORTERM=truecolor
 
