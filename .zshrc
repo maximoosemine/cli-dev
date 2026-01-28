@@ -1,4 +1,7 @@
 source "${0:a:h}/.bashrc"
+# Unsets some aliases from .bashrc
+alias grep="grep"
+alias rg="rg"
 
 export EDITOR=nvim
 alias vim='nvim'
