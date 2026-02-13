@@ -175,7 +175,8 @@ vim.lsp.enable('rust_analyzer')
 
 vim.lsp.enable('html')
 
-vim.lsp.enable('remark_ls') -- Doesn't really do anything
+-- Is currently broken and didn't do anything anyways
+-- vim.lsp.enable('remark_ls') -- Doesn't really do anything
 
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
 vim.keymap.set('n', 'gr', vim.lsp.buf.references, {})
