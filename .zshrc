@@ -26,6 +26,10 @@ alias gbu="git branch --sort=-committerdate --format='$GIT_BRANCH_FORMAT' --colo
 
 alias gdto="git difftool"
 alias gmto="git mergetool"
+gdtoo() {
+  local ref="${1:-HEAD}"
+  gdto "$ref^..$ref"
+}
 
 alias pandoc-annotate="pandoc --embed-resources -s --css ~/cli-dev/annotate.css"
 
