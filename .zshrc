@@ -10,6 +10,13 @@ alias vi='nvim'
 export LESS="$LESS -c"
 
 alias fzfg="git ls-files -m | fzf"
+fzfgl() {
+  local flags=""
+  [[ "$1" == "-a" ]] && flags="--all"
+  git log --oneline --decorate $flags --color=always \
+    | fzf --ansi --preview 'git show --color=always {1}' \
+    | awk '{print $1}'
+}
 
 GIT_BRANCH_FORMAT='%(refname:short)%(if)%(upstream:short)%(then) %(color:red)(%(if:equals=)%(upstream:track,nobracket)%(then)= %(end)%(upstream:short))%(color:reset)%(end) %(color:green)(%(committerdate:relative))%(color:reset) %(color:blue)<%(authorname)>%(color:reset)'
 
