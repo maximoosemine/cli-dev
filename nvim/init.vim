@@ -34,7 +34,7 @@ Plug 'igorlfs/nvim-dap-view'
 Plug 'vim-airline/vim-airline'
 
 " AI tools
-Plug 'github/copilot.vim'
+" Plug 'github/copilot.vim'
 
 call plug#end()
 
