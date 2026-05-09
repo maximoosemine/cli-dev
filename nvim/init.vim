@@ -175,6 +175,8 @@ vim.lsp.enable('rust_analyzer')
 
 vim.lsp.enable('html')
 
+vim.lsp.enable('solargraph')
+
 -- Is currently broken and didn't do anything anyways
 -- vim.lsp.enable('remark_ls') -- Doesn't really do anything
 
