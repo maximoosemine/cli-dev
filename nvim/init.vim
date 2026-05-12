@@ -21,9 +21,11 @@ Plug 'sainnhe/everforest'
 " Git
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'tpope/vim-fugitive'
+Plug 'sindrets/diffview.nvim'
 
 " Icons. REQUIRES NERD FONT
 Plug 'ryanoasis/vim-devicons'
+Plug 'nvim-tree/nvim-web-devicons'
 
 " Debug
 " Debugging is configured on a per machine basis. See: https://codeberg.org/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation
