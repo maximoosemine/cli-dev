@@ -24,7 +24,8 @@ alias gb="git branch --sort=-committerdate --format='$GIT_BRANCH_FORMAT'"
 alias gba="git branch -a --sort=-committerdate --format='$GIT_BRANCH_FORMAT'"
 alias gbu="git branch --sort=-committerdate --format='$GIT_BRANCH_FORMAT' --color=always | grep --color=never \"<$(git config user.name)>\" | less"
 
-alias gdto="git difftool"
+unalias gdto 2>/dev/null
+gdto() { nvim -c "DiffviewOpen $*"; }
 alias gmto="git mergetool"
 gdtoo() {
   local ref="${1:-HEAD}"
