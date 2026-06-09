@@ -26,6 +26,7 @@ alias gbu="git branch --sort=-committerdate --format='$GIT_BRANCH_FORMAT' --colo
 
 unalias gdto 2>/dev/null
 gdto() { nvim -c "DiffviewOpen $*"; }
+gdtol() { nvim -c "DiffviewFileHistory --range=$*"; }
 alias gmto="git mergetool"
 gdtoo() {
   local ref="${1:-HEAD}"
