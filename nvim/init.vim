@@ -255,6 +255,17 @@ noremap <leader>h :Gitsigns preview_hunk_inline<CR>
 noremap <leader>s :Gitsigns stage_hunk<CR>
 noremap <leader>r :Gitsigns reset_hunk<CR>
 
+" Diffview config
+lua << EOF
+require('diffview').setup({
+  view = {
+    merge_tool = {
+      layout = "diff3_mixed",
+    },
+  },
+})
+EOF
+
 " Theme stuff
 set termguicolors
 
