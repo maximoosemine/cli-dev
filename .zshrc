@@ -50,6 +50,9 @@ export PRIORITY_STYLES="tw=1;34:ow=1;34:"
 export LS_COLORS="${LS_COLORS}${PRIORITY_STYLES}"
 zstyle ':completion:*' list-colors ${(s.:.)PRIORITY_STYLES} ${(s.:.)LS_COLORS} # For some reason `zstyle` prioritizes in the opposite order
 
+#Dev containers
+alias dc="bash $DC_CONFIG/dc.sh"
+
 # Make it easier to get back into the same tmux session
 alias desktop='tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux'
 

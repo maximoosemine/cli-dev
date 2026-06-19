@@ -1,0 +1,25 @@
+{
+  "name": "claude-aws-gh",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": { "version": "20" },
+    "ghcr.io/devcontainers/features/aws-cli:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "containerEnv": {
+    "COLORTERM": "truecolor",
+    "TERM": "xterm-256color",
+    "CLAUDE_CODE_NO_FLICKER": "1",
+    "LANG": "C.UTF-8",
+    "LC_ALL": "C.UTF-8",
+    "VISUAL": "nvim",
+    "EDITOR": "nvim",
+    "CLAUDE_CONFIG_DIR": "/home/vscode/.claude",
+    "CLAUDE_CODE_OAUTH_TOKEN": "${localEnv:CLAUDE_CODE_OAUTH_TOKEN}"
+  },
+  "mounts": [
+    "source=${localEnv:HOME}/.config/devcontainer-gh,target=/home/vscode/.config/gh,type=bind",
+    "source=claude-code-config,target=/home/vscode/.claude,type=volume"
+  ],
+  "postCreateCommand": "bash .devcontainer/postCreate.sh"
+}
