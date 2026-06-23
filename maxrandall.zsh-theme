@@ -50,7 +50,17 @@ function _theme_precmd() {
   _cmd_elapsed=""
   if [[ -n $_cmd_start ]]; then
     local e=$(( EPOCHREALTIME - _cmd_start ))
-    (( e > 2 )) && _cmd_elapsed=$(printf '%.1fs' $e)
+    if (( e > 2 )); then
+      local t=${e%.*} h m s
+      (( h = t / 3600, m = (t % 3600) / 60, s = t % 60 ))
+      if (( h > 0 )); then
+        _cmd_elapsed="${h}h ${m}m ${s}s"
+      elif (( m > 0 )); then
+        _cmd_elapsed="${m}m ${s}s"
+      else
+        _cmd_elapsed=$(printf '%.1fs' $e)
+      fi
+    fi
     unset _cmd_start
   fi
 }
